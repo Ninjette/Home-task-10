@@ -1,0 +1,36 @@
+// Bootstap framework
+// - Bootstap base
+@import "../external/bootstrap/stylesheets/parts/variables";
+@import "../external/bootstrap/stylesheets/parts/mixins";
+@import "../external/bootstrap/stylesheets/parts/scaffolding";
+@import "../external/bootstrap/stylesheets/parts/type";
+@import "../external/bootstrap/stylesheets/parts/normalize";
+// - Bootstrap layout
+@import "../external/bootstrap/stylesheets/parts/grid";
+@import "../external/bootstrap/stylesheets/parts/utilities";
+@import "../external/bootstrap/stylesheets/parts/responsive-utilities";
+// - Bootstrap elements
+// @import "../external/bootstrap/stylesheets/parts/breadcrumbs";
+@import "../external/bootstrap/stylesheets/parts/buttons";
+// @import "../external/bootstrap/stylesheets/parts/forms";
+// @import "../external/bootstrap/stylesheets/parts/navbar";
+// @import "../external/bootstrap/stylesheets/parts/tables";
+// @import "../external/bootstrap/stylesheets/parts/modals";
+// @import "../external/bootstrap/stylesheets/parts/component-animations";
+//Base rules (core rules with normalize)
+@import "base/vars.scss";
+@import "base/mixins.scss";
+//@import "base/normalize";
+@import "base/base.scss";
+@import "base/layout.scss";
+//Objects rules
+@import "objects/items.scss";
+@import "objects/header.scss";
+@import "objects/footer.scss";
+@import "objects/forms.scss";
+@import "objects/objects.scss";
+//State rules
+@import "state/state.scss";
+@import "state/laptop.scss";
+@import "state/tablet.scss";
+@import "state/mobile.scss";

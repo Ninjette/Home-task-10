@@ -1,0 +1,56 @@
+// Placeholder
+//  ========================================================================== 
+
+@mixin placeholder-color($color){
+  &.placeholder{
+    color: $color
+  }
+
+  &:-moz-placeholder{
+    color: $color
+  }
+    
+  &::-webkit-input-placeholder{
+    color: $color
+  }
+
+  &:-ms-input-placeholder{
+    color: $color
+  }
+}
+// Background Gradient
+//  ========================================================================== 
+@mixin background-gradient($startColor, $endColor) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+	background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+	background-image:      -o-linear-gradient(top, $startColor, $endColor);
+	background-image:         linear-gradient(top, $startColor, $endColor);
+	filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+// Background Horizontal
+//  ========================================================================== 
+@mixin background-horizontal($startColor, $endColor) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+	background-image:    -moz-linear-gradient(left, $startColor, $endColor);
+	background-image:     -ms-linear-gradient(left, $startColor, $endColor);
+	background-image:      -o-linear-gradient(left, $startColor, $endColor);
+	background-image:         linear-gradient(left, $startColor, $endColor);
+	filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
+}
+
+ // Background Radial
+//  ========================================================================== 
+@mixin background-radial($startColor, $startPos, $endColor, $endPos) {
+	background: -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$startColor), color-stop($endPos,$endColor));
+	background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+	background: -o-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+	background: -ms-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+	background: radial-gradient(ellipse at center, $startColor $startPos,$endColor $endPos);
+}

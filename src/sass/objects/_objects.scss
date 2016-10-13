@@ -1,0 +1,86 @@
+.new-message{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	&__input{
+		width: calc(100% - 100px);
+		height: 53px;
+		vertical-align: top;
+		padding: 3px 12px;
+		font-size: 16px;
+		border: 2px solid #34495E;
+		&:focus{
+			outline: none;
+		}
+	}
+	&__btn{
+		width: 100px;
+		height: 53px;
+	}
+}
+
+.message{
+	padding: 20px 30px;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 4px;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	&__info{
+		margin-left: 70px;
+	}
+	&__icon{
+		float: left;
+		margin-right: 20px;
+		width: 50px;
+		height: 50px;
+		background-color: #D2D4D5;
+		color: grey;
+		padding: 0;
+		border-radius: 50%;
+		float: left;
+	}
+}
+.login{
+	text-align: center;
+	&__form{
+		display: inline-block;
+	}
+	&__input{
+		vertical-align: top;
+		height: 33px;
+		padding: 3px 8px;
+		outline: none;
+		border: none;
+		box-shadow: inset 0 0 1px 1px #C2C3C4;
+		transition: box-shadow .25s ease-out;
+		&:focus{
+			transition: box-shadow 0s;
+			outline: none;
+			box-shadow: inset 0 0 1px 1px #34495e;
+			
+		}
+	}
+}
+.info{
+	width: 300px;
+	float: right;
+	border-radius: 4px;
+	background: #DBDBDB;
+	color: #444;
+	margin-bottom: 20px;
+	max-height: 150px;
+	overflow: auto;
+	&__message{
+		padding: 5px 12px;
+	}
+	&__message:first-child{
+		padding-top: 15px;
+	}
+	&__message:last-child{
+		padding-bottom: 15px;
+	}
+	&__username{
+		margin-right: 6px;
+	}
+}

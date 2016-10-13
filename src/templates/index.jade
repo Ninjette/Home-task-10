@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		- var page_name = "Temp"
+		include ./includes/head.jade
+
+	body(ng-app='chatApp')
+		include ./includes/header.jade
+
+		main(ng-controller='mainCtrl')
+			.container
+				.login.container--modificator(ng-hide="connected")
+					h3.title Write your name
+					form(ng-submit='setUserName(user)').login__form
+						input.login__input(required, ng-model='user', type='text')
+						button.login__btn.btn.button submit
+				.chat-block(ng-show="connected")
+					p.title.text-center(ng-show='connected') Welcome to chat {{user}}
+					p.text-center.subtitle {{onlineUsers}}
+					form(ng-submit='addMessage(message)').new-message
+						input.new-message__input(required , ng-model='message', placeholder='Write your message')
+						button.new-message__btn.btn.button submit
+					.info-wrap.clearfix
+						.info
+							.info__message(ng-repeat='info in serverInfo')
+								span.info__username {{info.username}}
+								span.info__option {{info.option}}
+
+					.messages(ng-repeat='message in messages')
+						.message.clearfix
+							img(src="img/avatar.svg" alt="avatar").message__icon
+							.message__info
+								.message__name 
+									strong Name: 
+									| {{message.name}}
+								.message__text 
+									strong Message: 
+									| {{message.text}}
+		include ./includes/footer.jade
