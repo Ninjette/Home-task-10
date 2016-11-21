@@ -1,5 +1,4 @@
-# Home-task-10
-chat using websocket
+# chat using websocket
 
 <h3>Task</h3>
 Create chat on websocket. Output data about entering or escaping users on the page. Log messages of users in json file. 
